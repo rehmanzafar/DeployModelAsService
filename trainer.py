@@ -38,7 +38,7 @@ model.compile(optimizer='adadelta',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-model.fit(x_train, y_train, epochs=1, batch_size=batch_size, validation_data=(x_test, y_test))
+model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size, validation_data=(x_test, y_test))
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
